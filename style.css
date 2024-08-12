@@ -88,16 +88,66 @@ legend {
 	display: block;
 }
 
+/* My styles */
 
 body {
     background-color: #004643;
+    font-family: "Roboto Mono", monospace, sans-serif;
+    font-size: 18px;
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .header, .footer {
-    height: 40px;
+    height: 80px;
+    padding: 0 24px;
     background-color: #0c1618;
 }
 
+.header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.title {
+    font-size: 24px;
+}
+
 .main {
-    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 60px;
+    flex: 1;
+    padding: 40px 24px;
+}
+
+.add-book {
+    height: 60px;
+    width: 200px;
+    background-color: #0c1618;
+    border-radius: 20px;
+    border: 2px solid white;
+    transition: all 200ms ease;
+}
+
+.add-book:hover,
+.add-book:focus {
+    transform: scale(1.2);
+}
+
+.books-wrapper {
+    display: flex;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
