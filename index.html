@@ -15,38 +15,50 @@
 <body>
     <div class="container">
         <header class="header">
-            <h1 class="title">svg here () Library</h1>
+            <div class="logo-wrapper">
+                <svg class="logo-icon">
+                    <use xlink:href="./sprite.svg#icon-books"/>
+                </svg>
+                <h1 class="title">Library</h1>
+            </div>
         </header>
         <main class="main">
             <button class="add-book" type="button">Add a Book</button>
-            <ul class="books-wrapper">
-                <li>Hkd</li>
-                <li>sdsd</li>
-            </ul>
+            <ul class="books-list"></ul>
         </main>
-        <footer class="footer">Library by Alex Filimonov svg here()</footer>
+        <footer class="footer">
+            <p>Library by Alex Filimonov</p>
+            <a href="https://github.com/alexfil3" target="_blank" rel="noopener noreferrer">
+                <svg class="logo-icon">
+                    <use xlink:href="./sprite.svg#icon-github"/>
+                </svg>
+            </a>
+        </footer>
     </div>
     <dialog class="dialog">
         <form class="form" action="" method="dialog">
             <div class="form-flex">
                 <div class="field-wrapper">
                     <label class="label" for="title">Title</label>
-                    <input class="input" type="text" id="title">
+                    <input class="input" type="text" id="title" minlength="2" maxlength="20" required>
                 </div>
                 <div class="field-wrapper">
                     <label class="label" for="author">Author</label>
-                    <input class="input" type="text" id="author">
+                    <input class="input" type="text" id="author" minlength="2" maxlength="20" required>
                 </div>
                 <div class="field-wrapper">
                     <label class="label" for="pages">Pages</label>
-                    <input class="input" type="text" id="pages">
+                    <input class="input" type="number" id="pages" required>
                 </div>
-                <div class="field-wrapper">
+                <div class="field-wrapper switches">
                     <label class="label" for="read">Read</label>
-                    <input class="input" type="text" id="read">
+                    <input class="input" type="checkbox" id="read">
                 </div>
             </div>
-            <button class="submit" type="submit">Add</button>
+            <div class="buttons-wrapper">
+                <button class="cancel" type="button">Cancel</button>
+                <button class="submit" type="submit">Add</button>
+            </div>
         </form>
     </dialog>
     <script src="./index.js"></script>
